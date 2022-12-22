@@ -564,6 +564,11 @@ button, a { transition: var(--transition); }
   padding-block: var(--section-padding);
 }
 
+.propertys{
+  background: var(--cultured-2);
+  padding-block: var(--section-padding);
+}
+
 .service-list {
   display: flex;
   flex-wrap: wrap;
@@ -646,7 +651,7 @@ button, a { transition: var(--transition); }
 
 .property-card .card-banner img {
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   transition: 0.5s ease;
 }
 
@@ -814,8 +819,12 @@ button, a { transition: var(--transition); }
 \*-----------------------------------*/
 
 .features {
-  background: var(--cultured-2);
+  /* background: var(--cultured-2); */
   padding-block: var(--section-padding);
+}
+
+.blog{
+  background: var(--cultured-2);
 }
 
 .features-list {
@@ -843,7 +852,7 @@ button, a { transition: var(--transition); }
 
 .features-card:is(:hover, :focus) { background: var(--orange-soda-2); }
 
-.features-card .card-icon {
+/* .features-card .card-icon {
   background: var(--seashell);
   color: var(--orange-soda);
   width: 60px;
@@ -852,7 +861,7 @@ button, a { transition: var(--transition); }
   place-items: center;
   border-radius: 50%;
   font-size: 28px;
-}
+} */
 
 .features-card .card-icon ion-icon { --ionicon-stroke-width: 20px; }
 
@@ -889,7 +898,7 @@ button, a { transition: var(--transition); }
 /* Contact */
 
 .contacts{
-  background: var(--cultured-2);;
+  /* background: var(--cultured-2);; */
 }
 
 .contactUs{

@@ -430,12 +430,15 @@ button, a { transition: var(--transition); }
   #HERO
 \*-----------------------------------*/
 
-.hero {
+.hero-main {
   background: var(--cultured-2);
-  padding-block: var(--section-padding);
+  padding: 20px 0px;
+  /* padding-block: var(--section-padding); */
 }
 
-.hero-content { margin-bottom: 60px; }
+.hero-content { margin-bottom: 60px;
+  margin-top: 60px;
+}
 
 .hero-subtitle {
   display: flex;
@@ -453,7 +456,11 @@ button, a { transition: var(--transition); }
   font-weight: var(--fw-700);
 }
 
-.hero-title { margin-bottom: 20px; }
+.hero-title { 
+  margin-bottom: 60px;
+  align-items: center;
+  text-align: center; 
+}
 
 .hero-text {
   color: var(--cadet);
@@ -565,7 +572,7 @@ button, a { transition: var(--transition); }
 }
 
 .propertys{
-  background: var(--cultured-2);
+  /* background: var(--cultured-2); */
   padding-block: var(--section-padding);
 }
 
@@ -634,7 +641,7 @@ button, a { transition: var(--transition); }
   #PROPERTY
 \*-----------------------------------*/
 
-.property { padding-block: var(--section-padding); }
+.property { padding-block: var(--section-padding); background: var(--cultured-2); }
 
 .property-card {
   border: 1px solid var(--alice-blue);
@@ -772,6 +779,46 @@ button, a { transition: var(--transition); }
   height: 40px;
   overflow: hidden;
   border-radius: 50%;
+}
+
+.whatsapp-button{
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 99;
+  background-color: #25d366;
+  border-radius: 50px;
+  color: #ffffff;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 25px -6px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 25px -6px rgba(0,0,0,1);
+  box-shadow: 0px 0px 25px -6px rgba(0,0,0,1);
+  animation: effect 5s infinite ease-in;
+}
+
+@keyframes effect {
+  20%, 100% {
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+  }
+  0%, 10%{
+      width: 55px;
+      height: 55px;
+      font-size: 35px;
+  }
+  5%{
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+  }
 }
 
 .author-name > a {

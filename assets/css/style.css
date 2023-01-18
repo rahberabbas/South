@@ -58,7 +58,13 @@
 
 }
 
+header.desktop{
+  display: none;
+}
 
+/* header.mobile {
+  display: none;
+} */
 
 
 
@@ -843,6 +849,7 @@ button, a { transition: var(--transition); }
 }
 
 .card-footer-actions-btn {
+  /* background: var(--cultured-2); */
   background: var(--cultured-2);
   color: var(--cadet);
   width: 35px;
@@ -1260,7 +1267,7 @@ button, a { transition: var(--transition); }
 \*-----------------------------------*/
 
 .cta {
-  background: linear-gradient(to bottom, var(--white) 50%, var(--raisin-black-1) 50%);
+  background: var(--orange-soda);
 }
 
 .cta-card {
@@ -1315,8 +1322,9 @@ button, a { transition: var(--transition); }
 \*-----------------------------------*/
 
 .footer {
-  background: var(--raisin-black-1);
-  color: var(--white);
+  /* background: var(--raisin-black-1); */
+  background: var(--cultured-2);;
+  color: black;
   margin-bottom: 68px;
 }
 
@@ -1386,6 +1394,7 @@ button, a { transition: var(--transition); }
 
 .footer-bottom {
   background: var(--raisin-black-2);
+  color: #fff;
   padding-block: 25px;
 }
 

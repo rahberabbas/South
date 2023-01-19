@@ -46,10 +46,10 @@
         <ul class="header-top-list">
 
           <li>
-            <a href="mailto:singhsania353@gmail.com" class="header-top-link">
+            <a href="mailto:SouthCityGreens@gmail.com" class="header-top-link">
               <ion-icon name="mail-outline"></ion-icon>
 
-              <span>singhsania353@gmail.com</span>
+              <span>SouthCityGreens@gmail.com</span>
             </a>
           </li>
 
@@ -231,10 +231,10 @@
         <ul class="header-top-list">
 
           <li>
-            <a href="mailto:singhsania353@gmail.com" class="header-top-link">
+            <a href="mailto:SouthCityGreens@gmail.com" class="header-top-link">
               <ion-icon name="mail-outline"></ion-icon>
 
-              <span>singhsania353@gmail.com</span>
+              <span>SouthCityGreens@gmail.com</span>
             </a>
           </li>
 
@@ -663,40 +663,40 @@
           <div class="box">
             <div class="contact form">
               <h3>Send a Message</h3>
-              <form action="">
+              <form action="" method="post">
                 <div class="formBox">
                   <div class="row50">
                     <div class="inputbox">
                       <span>First Name</span>
-                      <input type="text" name="" id="" placeholder="John">
+                      <input type="text" name="" id="fname" placeholder="John" required>
                     </div>
                     <div class="inputbox">
                       <span>Last Name</span>
-                      <input type="text" name="" id="" placeholder="Doe">
+                      <input type="text" name="" id="lname" placeholder="Doe" required>
                     </div>
                   </div>
 
                   <div class="row50">
                     <div class="inputbox">
                       <span>Email</span>
-                      <input type="email" name="" id="" placeholder="john@gmail.com">
+                      <input type="email" name="" id="email" placeholder="john@gmail.com" required>
                     </div>
                     <div class="inputbox">
                       <span>Mobile</span>
-                      <input type="text" name="" id="" placeholder="+1234567890 ">
+                      <input type="text" name="" id="mobile" placeholder="+1234567890 " required>
                     </div>
                   </div>
 
                   <div class="row100">
                     <div class="inputbox">
                       <span>Message</span>
-                      <textarea name="" id="" cols="30" rows="10" placeholder="Enter Your Text here..."></textarea>
+                      <textarea name="" id="msg" cols="30" rows="10" placeholder="Enter Your Text here..." required></textarea>
                     </div>
                   </div>
 
                   <div class="row100">
                     <div class="inputbox">
-                      <input type="Submit" class="btn" name="" id="" value="Send">
+                      <button type="submit" onclick="sendEmail(); reset(); return false;" id="submit" class="btn" name="" value="Send" style="text-align: center;">Send</button>
                     </div>
                   </div>
                 </div>
@@ -711,7 +711,7 @@
                 </div>
                 <div class="">
                   <span><ion-icon name="mail"></ion-icon></span>
-                  <a href="mailto:singhsania353@gmail.com">singhsania353@gmail.com</a>
+                  <a href="mailto:SouthCityGreens@gmail.com">SouthCityGreens@gmail.com</a>
                 </div>
                 <div class="">
                   <span><ion-icon name="call"></ion-icon></span>
@@ -827,9 +827,9 @@
             </li>
 
             <li>
-              <a href="mailto:singhsania353@gmail.com" class="contact-link">
+              <a href="mailto:SouthCityGreens@gmail.com" class="contact-link">
                 <ion-icon name="mail-outline"></ion-icon>
-                <span>singhsania353@gmail.com</span>
+                <span>SouthCityGreens@gmail.com</span>
               </a>
             </li>
 
@@ -866,6 +866,32 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script>  
+    function sendEmail() {
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value;
+        let email = document.getElementById("email").value;
+        let mobile = document.getElementById("mobile").value;
+        let message = document.getElementById("msg").value;
+        let finalmessage = `First Name : ${fname} <br> Last Name : ${lname} <br>  Email : ${email} <br> Mobile : ${mobile} <br>  Message : ${message} <br>`;
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "leads.southcitygreens@gmail.com",
+            Password : "966A6DB43C4ECE0533171ABA89A5A4916159",
+            port: 2525,
+            To : 'singhsania353@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "Mail from website",
+            Body : finalmessage
+        }).then(
+          message => alert("Message Sent Successfully")
+        );
+    }
+    </script>
 
 </body>
 
